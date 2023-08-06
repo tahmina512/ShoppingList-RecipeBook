@@ -1,11 +1,9 @@
-<app-header></app-header>
-<!-- to keep responsiveness divide the screen as medium screen, break 
-into 12 col and then dive the sub component like 7 col and 5 col to keep the responsiveness -->
-<div class="contianer">
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+<div class="contianer content">
   <div class="row">
     <div class="col-md-12">
-      <app-recipe></app-recipe>
-      <app-shopping-list></app-shopping-list>
+      <app-recipe *ngIf="loadedFeature === 'recipe'"></app-recipe>
+      <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list>
     </div>
   </div>
 </div>
