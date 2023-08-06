@@ -1,5 +1,4 @@
 export class Recipe {
-  // blueprint of every recipe item : how does it look like
   public name: string;
   public description: string;
   public imagePath: string;
