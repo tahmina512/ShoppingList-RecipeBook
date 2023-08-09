@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { RecipeStartComponent } from './recipe/recipe-start/recipe-start.component';
 import { RecipeDetailsComponent } from './recipe/recipe-details/recipe-details.component';
 import { RecipeEditComponent } from './recipe/recipe-edit/recipe-edit.component';
-
+//maintain children path serial
 const appRoutes: Routes = [
   { path: '', redirectTo: '/recipe', pathMatch: 'full' },
   {
@@ -16,11 +16,12 @@ const appRoutes: Routes = [
         path: '',
         component: RecipeStartComponent,
       },
-      { path: ':id', component: RecipeDetailsComponent },
       {
         path: 'new',
         component: RecipeEditComponent,
       },
+      { path: ':id', component: RecipeDetailsComponent },
+
       {
         path: ':id/edit',
         component: RecipeEditComponent,
